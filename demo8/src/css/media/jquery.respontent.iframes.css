@@ -1,0 +1,44 @@
+/*	Standard iframe */
+.respontent-iframe-square {
+  overflow: hidden;
+  height: 0;
+  padding: 0;
+  position: relative;
+  padding-top: 100%; }
+  .respontent-iframe-square iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; }
+
+/*	Googlemaps iframe */
+.respontent-iframe-googlemaps {
+  overflow: hidden;
+  height: 0;
+  padding: 0;
+  position: relative;
+  padding-top: 85%; }
+  .respontent-iframe-googlemaps iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; }
+
+/*	YouTube iframe (+ object/embed) */
+.respontent-iframe-youtube {
+  overflow: hidden;
+  height: 0;
+  padding: 0;
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 56%; }
+  .respontent-iframe-youtube iframe,
+  .respontent-iframe-youtube object,
+  .respontent-iframe-youtube embed {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; }

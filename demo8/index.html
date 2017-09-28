@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
+		<meta content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" name="viewport" />
+
+		<meta name="description" content="Responstent is a jQuery plugin that automagically makes your user generated content responsive. Video's, tables, images and maps, respontent'll make it fit." />
+		<title>jQuery.respontent &raquo; Automagically make your user generated content responsive.</title>
+
+		<script src="http://www.jq22.com/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/layout.js"></script>
+		<script type="text/javascript" src="js/jquery.respontent.min.js"></script>
+
+		<script type="text/javascript" language="javascript">
+			$(function() {
+				$('.example .w').respontent();
+			});
+		</script>
+
+		<link type="text/css" rel="stylesheet" href="css/normalize.css" />
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+		<link type="text/css" rel="stylesheet" href="css/layout.css" />
+		<link type="text/css" rel="stylesheet" href="css/jquery.respontent.css" />
+
+	</head>
+	<body>
+
+		<nav>
+			<ul>
+				<li class="selected"><a href="#intro">Intro</a></li>
+				<li><a href="#examples">Examples</a></li>
+				<li><a href="#download">Download</a></li>
+				<li><a href="#usage">Usage</a></li>
+				<li><a href="#about">About</a></li>
+			</ul>
+		</nav>
+
+		<div id="wrapper">
+		  <section id="examples">
+			  <div class="example">
+					<h3><span>Images</span></h3>
+					<div>
+						<div class="w">
+							<em>with respontent</em>
+						  <img src="http://lorempixel.com/g/400/300/cats/5/" />
+						</div>
+						<div class="divider"></div>
+						<div class="wo">
+							<em>without respontent</em>
+						  <img src="http://lorempixel.com/g/400/300/cats/5/" />
+						</div>
+					</div>
+			</div>
+	
+				<div class="example">
+					<h3><span>YouTube videos</span></h3>
+					<div>
+						<div class="w">
+							<em>with respontent</em>
+						  <iframe width="400" height="300" src="http://player.youku.com/player.php/sid/XNzYzNDQ5MDY0/v.swf" frameborder="0" allowfullscreen></iframe>
+						</div>
+						<div class="divider"></div>
+						<div class="wo">
+							<em>without respontent</em>
+						  <iframe width="400" height="300" src="http://player.youku.com/player.php/sid/XMjMwMTM5NTQ4/v.swf" frameborder="0" allowfullscreen></iframe>
+						</div>
+					</div>
+				</div>
+	
+				<div class="example">
+					<h3><span>Tables</span></h3>
+					<div>
+						<div class="w">
+							<em>with respontent</em>
+							<table border="1" cellpadding="5" cellspacing="5">
+								<thead>
+									<tr>
+										<th>Population</th>
+										<th>Food source</th>
+										<th>Shelter</th>
+										<th>Socialized</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Pedigree</td>
+										<td>Fed by guardian</td>
+										<td>Human guardian</td>
+										<td>Yes</td>
+									</tr>
+									<tr>
+										<td>Pet</td>
+										<td>Fed by guardian</td>
+										<td>Human homes</td>
+										<td>Yes</td>
+									</tr>
+									<tr>
+										<td>Semi-feral</td>
+										<td>General feeding</td>
+										<td>Buildings</td>
+										<td>Yes</td>
+									</tr>
+									<tr>
+										<td>Feral</td>
+										<td>General feeding/foraging</td>
+										<td>Buildings</td>
+										<td>No</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="divider"></div>
+						<div class="wo">
+							<em>without respontent</em>
+							<table border="1" cellpadding="5" cellspacing="5">
+								<thead>
+									<tr>
+										<th>Population</th>
+										<th>Food source</th>
+										<th>Shelter</th>
+										<th>Socialized</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Pedigree</td>
+										<td>Fed by guardian</td>
+										<td>Human guardian</td>
+										<td>Yes</td>
+									</tr>
+									<tr>
+										<td>Pet</td>
+										<td>Fed by guardian</td>
+										<td>Human homes</td>
+										<td>Yes</td>
+									</tr>
+									<tr>
+										<td>Semi-feral</td>
+										<td>General feeding</td>
+										<td>Buildings</td>
+										<td>Yes</td>
+									</tr>
+									<tr>
+										<td>Feral</td>
+										<td>General feeding/foraging</td>
+										<td>Buildings</td>
+										<td>No</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+	
+				
+		  </section>
+		  <section id="usage">
+			  <div class="text">
+					<h2>Usage</h2>
+					<p>First, include jQuery and the jQuery.respontent-plugin files in your webpage:</p>
+<pre>
+&lt;head&gt;
+   &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;jquery.respontent.css&quot; /&gt;
+   &lt;script type=&quot;text/javascript&quot; src=&quot;jquery.js&quot;&gt;&lt;/script&gt;
+   &lt;script type=&quot;text/javascript&quot; src=&quot;jquery.respontent.min.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+</pre>
+
+					<br />
+					<p>Second (and last), fire the plugin targeting the HTML node that contains the user generated content:</p>
+<pre>
+$(document).ready(function() {
+   $("#wrapper").respontent({
+      //  configuration goes here
+   });
+});
+</pre>
+
+					<br />
+					<p>The options that can be passed in the configuration-object:</p>
+					<dl>
+						<dt>images</dt>
+						<dd>Whether or not to make images responsive.<br />
+							Default value: <code>true</code>.</dd>
+						<dt>youtube</dt>
+						<dd>Whether or not to make YouTube videos responsive.<br />
+							Default value: <code>true</code>.</dd>
+						<dt>tables</dt>
+						<dd>Whether or not to make tables responsive.<br />
+							Default value: <code>true</code>.</dd>
+						<dt>googlemaps</dt>
+						<dd>Whether or not to make Google Maps responsive.<br />
+							Default value: <code>true</code>.</dd>
+					</dl>
+			</div>
+		  </section>
+
+			<section id="about">
+				<div class="text">
+					<h2>About</h2>
+					<p>What's the biggest issue with responsive design? It's not the HTML, CSS or JavaScript, it's the &quot;User Generated Content&quot;. The client uses the WYSIWYG-editor in his CMS to create and edit pages; he adds images, video's, tables and other non-responsive content. All designed to fit the desktop version of his website, he never even realizes the same content goes into the mobile version of the website. Fortunately, this no longer is an issue; the <strong><acronym title="responsive content">respontent</acronym></strong> jQuery plugin will make it fit.</p>
+				</div>
+
+				<div class="explanation">
+					<h3><span>Images</span></h3>
+					<p class="text">The classname <code>respontent-image</code> is added to the image. This sets the <code>max-width</code> of the image to <code>100%</code> and the <code>height</code> to <code>auto</code>.</p>
+				</div>
+
+				<div class="explanation">
+					<h3><span>YouTube videos</span></h3>
+					<p class="text">A YouTube video is wrapped in a <code>DIV</code> that has the classname <code>respontent-youtube</code>. This wrapper <code>DIV</code> has its <code>width</code> set to <code>100%</code> so it will fill up the available space. It will also automatically resize its <code>height</code> to <code>56%</code> of its <code>width</code>. This creates a <code>19/6</code> ratio.</p>
+				</div>
+
+				<div class="explanation">
+					<h3><span>Tables</span></h3>
+					<div class="text">
+						<p>The <acronym title="responsive content">respontent</acronym> jQuery plugin distinguishes two types of tables:</p>
+						<ol>
+							<li>Tables with a <code>THEAD</code>, a <code>TFOOT</code> or a <code>TH</code>;</li>
+							<li>Tables without a <code>THEAD</code>, a <code>TFOOT</code> and a <code>TH</code>.</li>
+						</ol>
+	
+						<h5>Tables with a <code>THEAD</code>, a <code>TFOOT</code> or a <code>TH</code></h5>
+						<p>If the table contains either a <code>THEAD</code>, a <code>TFOOT</code> or a <code>TH</code> the plugin will assume it contains tabular content. The table is wrapped in a <code>DIV</code> that has the classname <code>respontent-table-scroll</code> which applies some styling and makes the table scrollable.</p>
+
+						<h5>Tables without a <code>THEAD</code>, a <code>TFOOT</code> and a <code>TH</code></h5>
+						<p>If the table does not contain a <code>THEAD</code>, a <code>TFOOT</code> or a <code>TH</code>, the plugin will assume it is used for layout purposes (e.g. dividing the content into two columns). The table is wrapped in a <code>DIV</code> that has the classname <code>respontent-table</code>. This will stack all <code>TD</code>s below each other by setting the <code>display</code> for all <code>TD</code>s to <code>block</code> and the <code>width</code> to <code>100%</code>.</p>
+					</div>
+				</div>
+
+				<div class="explanation">
+					<h3><span>Google Maps</span></h3>
+					<p class="text">All Google Maps are wrapped in a <code>DIV</code> that has the classname <code>respontent-googlemaps</code>. This wrapper <code>DIV</code> has its <code>width</code> set to <code>100%</code> so it will fill up the available space. It will also automatically resize its <code>height</code> to <code>100%</code> of its <code>width</code>. This creates a square map.</p>
+				</div>
+			</section>
+	</div>
+	</body>
+</html>

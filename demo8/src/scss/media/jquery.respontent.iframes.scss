@@ -1,0 +1,54 @@
+@mixin respontent-iframe
+{
+    overflow: hidden;
+    height: 0;
+    padding: 0;
+	position: relative;
+}
+@mixin respontent-iframe-inner
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*	Standard iframe */
+.respontent-iframe-square
+{
+	@include respontent-iframe;
+	padding-top: 100%;
+
+	iframe
+	{
+		@include respontent-iframe-inner;
+	}
+}
+
+/*	Googlemaps iframe */
+.respontent-iframe-googlemaps
+{
+	@include respontent-iframe;
+    padding-top: 85%;
+   
+    iframe
+	{
+		@include respontent-iframe-inner;
+	}
+}
+
+/*	YouTube iframe (+ object/embed) */
+.respontent-iframe-youtube
+{
+	@include respontent-iframe;
+    padding-top: 30px;
+    padding-bottom: 56%;
+
+	iframe,
+	object,
+	embed
+	{
+		@include respontent-iframe-inner;
+	}
+}
